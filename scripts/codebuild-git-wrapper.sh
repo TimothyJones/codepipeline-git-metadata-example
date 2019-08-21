@@ -1,5 +1,8 @@
 #!/bin/bash -eu
 
+# (C) Timothy Jones, https://github.com/TimothyJones/codepipeline-git-metadata-example
+# MIT License, see https://github.com/TimothyJones/codepipeline-git-metadata-example/blob/master/LICENSE
+
 # This function prints the usage
 function usage {
   {
