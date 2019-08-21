@@ -23,22 +23,24 @@ Make sure to replace the bracketed values before deployment.
 
 To see this in action, follow the following steps:
 
-1) Create a CodeCommit repository, note down the repository name and the clone URL.
-
-2) Clone this repository.
+1) Clone this repository.
 
 ```
 git clone https://github.com/TimothyJones/codepipeline-git-metadata-example.git
 ```
 
-3) Add your AWS repo as a remote, and push:
+2) Create an AWS CodeCommit repository, note down the repository name and the clone URL.
+
+3) Add your new CodeCommit repo as a remote, and push:
 
 ```
 git remote add aws <YOUR CLONE URL>
 git push -u aws master
 ```
 
-Deploy the pipeline: 
+3b) If the above push fails, you will probably need to [configure the AWS credential helper](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-https-unixes.html)
+
+4) Deploy the pipeline: 
 
 ```
 aws cloudformation deploy --template-file cfn-pipeline.yaml \
