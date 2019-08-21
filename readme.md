@@ -1,5 +1,7 @@
 # CodePipeline / CodeBuild / CodeCommit git metadata example
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This project illustrates how to get git metadata into CodePipeline by cloning the
 repository and winding it back to the right commit.
 
