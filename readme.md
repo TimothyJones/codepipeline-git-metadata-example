@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project illustrates how to get git metadata into CodePipeline by cloning the
-repository and winding it back to the right commit.
+repository and winding it back to the right commit. It is the companion code to [this blog post](https://medium.com/@timothyjones_88921/how-to-access-git-metadata-in-codebuild-when-using-codepipeline-codecommit-ceacf2c5c1dc), which explains the strategy in detail.
 
 You can deploy it with a command like this:
 
