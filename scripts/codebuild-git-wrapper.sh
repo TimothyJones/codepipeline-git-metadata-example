@@ -45,10 +45,11 @@ git clone --quiet "$REPO_URL" "$TEMP_FOLDER"
 
 # Wind the repository back to the specified branch and commit
 cd "$TEMP_FOLDER"
+git fetch --tags
 if [ ! -z "${BRANCH:-}" ]; then
   git checkout "$BRANCH"
 fi
-git reset "$CODEBUILD_RESOLVED_SOURCE_VERSION"
+git reset --hard "$CODEBUILD_RESOLVED_SOURCE_VERSION"
 
 # Confirm that the git checkout worked
 if [ ! -d  .git ] ; then
