@@ -1,5 +1,10 @@
 #!/bin/bash -eu
 
+# This is a workaround for a limitation of CodeBuild / CodePipeline, where the git metadata is missing.
+# It brings in the git metadata by checking out the repository and winding it to the currently building commit.
+# See https://itnext.io/how-to-access-git-metadata-in-codebuild-when-using-codepipeline-codecommit-ceacf2c5c1dc?
+# for the rationale and description.
+
 # (C) Timothy Jones, https://github.com/TimothyJones/codepipeline-git-metadata-example
 # MIT License, see https://github.com/TimothyJones/codepipeline-git-metadata-example/blob/master/LICENSE
 
