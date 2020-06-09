@@ -18,6 +18,13 @@ function usage {
   } >&2
 }
 
+# Skip if the working copy already has the .git directory.  This enables you to run your build under CodeBuild
+# Local for testing without change.
+if [[ -d .git ]]; then
+ echo "Working copy already has the .git directory so assuming this is already a valid clone.  Exiting"
+ exit 0
+fi 
+
 # Confirm that there are at least two arguments
 if [ "$#" -lt 1 ]; then
   usage
